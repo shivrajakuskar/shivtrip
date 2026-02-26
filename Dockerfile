@@ -8,16 +8,16 @@
         RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
         # Create a user for running the application
-        RUN useradd -m easemytrip
+        RUN useradd -m shivtrip
 
         # Copy your JAR file into the webapps directory
-        COPY ./target/easemytrip*.jar /usr/local/tomcat/webapps/
+        COPY ./target/shivtrip*.jar /usr/local/tomcat/webapps/
 
         # Expose the default Tomcat port
         EXPOSE 8080
 
-        # Set the user to 'easemytrip' for security
-        USER easemytrip
+        # Set the user to 'shivtrip' for security
+        USER shivtrip
 
         # Default command to run Tomcat
         CMD ["catalina.sh", "run"]
